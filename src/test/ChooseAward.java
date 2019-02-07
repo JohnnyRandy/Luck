@@ -372,6 +372,7 @@ public class ChooseAward extends JFrame  implements ActionListener {
  */
 class ChooseThread extends Thread {
 	private boolean runFlag = true;// 决定此线程是否运行的标记
+
 	// 需要该对象来读取文本框字段，不用创建它，申明下就好
 	private ChooseAward chooseAward = null;
 	// 创建一个新的随机数生成器
@@ -400,7 +401,7 @@ class ChooseThread extends Thread {
 			 */
 			// 返回向量中存储了几个号码的随便一个序号
 			int num = randomNumber.nextInt(chooseAward.v_identNumber.size());
-			// 显示那个选种的序号对应的号码
+			// 显示选中的序号对应的号码
 			chooseAward.t_identNumber
 					.setText((String) chooseAward.v_identNumber.elementAt(num));
 			try {
